@@ -9,11 +9,13 @@ def b_linear(alvo, vetor):
         if vetor[i] == alvo:
             print("Valor encontrado na posicao:", i)
             print("Numero de comparacoes:", comp_b_linear)
-        if i == 999:
+        if i > 1000:
+            print("Valor nao encontrado!")
             return -1
 
 def b_binaria(alvo, vetor, menor, maior, comp_b_binaria):
     if menor > maior:
+        print("Valor nao encontrado!")
         return -1
     meio = (maior + menor) / 2
     meio = int(meio)
@@ -40,12 +42,31 @@ def b_tabela(alvo, vetor):
         print("Falso")
 
 print("\nBusca Linear")
-b_linear(10, vetor)
+b_linear(500, vetor)
 print("----------------")
 print("\nBusca Binaria")
 b_binaria(500, vetor, 0, 999, 0)
 print("----------------")
 print("\nBusca por Tabela de Frequencia")
-b_tabela(1001, vetor)
+b_tabela(500, vetor)
 print("----------------")
 
+print("\nBusca Linear")
+b_linear(200, vetor)
+print("----------------")
+print("\nBusca Binaria")
+b_binaria(200, vetor, 0, 999, 0)
+print("----------------")
+print("\nBusca por Tabela de Frequencia")
+b_tabela(200, vetor)
+print("----------------")
+
+print("\nBusca Linear")
+b_linear(1001, vetor)
+print("----------------")
+print("\nBusca Binaria")
+b_binaria(1001, vetor, 0, 999, 0)
+print("----------------")
+print("\nBusca por Tabela de Frequencia")
+b_tabela(1001, vetor)
+print("----------------")
